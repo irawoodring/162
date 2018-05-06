@@ -1,5 +1,6 @@
 ---
-CIS 162 - Introduction
+~~CIS 162 - Computer Science 1~~
+CIS 162 - Wizardry 1
 
 Ira Woodring
 ---
@@ -32,7 +33,16 @@ Books, animals in jars, a scale for measuring.
 
 Saruman was a scholar too.
 ---
-In Harry Potter the same sort of elements appear.  The students study plants, animals, chemistry, etc.  Almost every time there is a major problem Hermione (easily the best wizard of the three) runs to the library to find an answer.
+In Harry Potter the same sort of elements appear.  The students study plants, animals, chemistry, etc.  Almost every time there is a major problem Hermione (easily the best wizard of the three) runs to the library to find an answer:
+---
+“Harry — I think I've just understood something! I've got to go to the library!”
+And she sprinted away, up the stairs.
+“What does she understand?” said Harry distractedly, still looking around, trying to tell where the voice had come from.
+“Loads more than I do,” said Ron, shaking his head.
+“But why’s she got to go to the library?”
+“Because that’s what Hermione does,” said Ron, shrugging. “When in doubt, go to the library.”
+― J.K. Rowling, Harry Potter and the Chamber of Secrets
+---?image=./introduction/images/hermione.jpg
 ---
 Even in the comics this idea appears!
 
@@ -43,4 +53,11 @@ Even in the comics this idea appears!
 >[Thor skims through a book on Norse mythology]
 
 >Thor: ...but you call it science. I come from a land where they are one and the same.
+
+---
+So magic is just what people attribute to phenomena they don't understand.  And science helps us to understand.
+---
+Even my own experience has reinforced this idea.  I was a System's Administrator for years.  It was very common for me to help someone and have them say "Wow, you're magic!"
+
+Yes, yes I am!  Because I understand the science behind it.
 ---
