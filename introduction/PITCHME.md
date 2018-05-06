@@ -28,3 +28,16 @@ We can see the same thing in The Lord of the Rings.  In the movies we get glimps
 In it, we see exactly the same type of room Merlyn had:
 ---?image=./introduction/images/saruman_tower.jpg&size=auto 50%
 ---
+Books, animals in jars, a scale for measuring.
+
+Saruman was a scholar too.
+---
+In Harry Potter the same sort of elements appear.  The students study plants, animals, chemistry, etc.  Almost every time there is a major problem Hermione (easily the best wizard of the three) runs to the library to find an answer.
+---
+Even in the comics this idea appears!
+
+>Jane Foster: Describe exactly what happened to you last night.
+Thor: Your ancestors called it magic...
+[Thor skims through a book on Norse mythology]
+Thor: ...but you call it science. I come from a land where they are one and the same.
+---
