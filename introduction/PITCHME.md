@@ -37,7 +37,10 @@ In Harry Potter the same sort of elements appear.  The students study plants, an
 Even in the comics this idea appears!
 
 >Jane Foster: Describe exactly what happened to you last night.
+
 >Thor: Your ancestors called it magic...
+
 >[Thor skims through a book on Norse mythology]
+
 >Thor: ...but you call it science. I come from a land where they are one and the same.
 ---
