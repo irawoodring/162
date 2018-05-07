@@ -71,7 +71,7 @@ So magic is just what people attribute to phenomena they don't understand.  And 
 ---
 Even my own experience has reinforced this idea.  I was a System's Administrator for years.  It was very common for me to help someone and have them say "Wow, you're magic!"
 
-Yes, yes I am!  Because I understand the science behind it.
+Of course not! I merely understand the science behind it.
 ---
 So yes, the name of this class - on the books - is Computer Science 1.  But really, it could just as easily be called Wizardry 1.
 
@@ -83,7 +83,7 @@ The very first, most important lesson in this field of wizardry is this:
 
 **Computers are just light switches.**
 
-They aren't magical.  They aren't scary.  They are machines composed of lots and lots (and lots...) of tiny switches.
+They aren't magical.  They aren't scary.  They are machines composed of lots and lots (and lots...) of tiny switches (called transistors).
 ---
 We solve problems with computers by figuring out how to convert our problem into a problem a computer can solve by flipping its switches.  We then interpret the state of those switches as an answer.
 
@@ -91,7 +91,7 @@ This is called programming.
 ---
 In the early days of computing this could be tough.  Sometimes "programming" a computer meant changing the wires around to connect components in different ways.
 
-These days we have higher level languages that convert human-like ideas into commands the computer understands for flipping switches (transistors).
+These days we have higher level languages that convert human-like ideas into commands the computer understands for flipping switches.
 ---
 In fact, often times we convert from one language to another language, to another language... on down the line until the code is ultimately composed into instructions a computer processor can understand.  We do this because each stage adds some level of abstraction that we require.  This leads us to my second law of computers:
 ---
@@ -103,13 +103,13 @@ Yes, I got this idea from Shrek:
 ---
 ![Video](https://www.youtube.com/embed/_bMcXVe8zIs)
 ---
-For instance, we might have something like this:
+For instance, we might have some math like this:
 
 ```
-x = x + 42;
+y = x + 42;
 ```
 
-This seems simple to us.  Take the value that x represents, add 42 to it and make x represent the new number.
+This seems simple to us.  Take the value that x represents, add 42 to it and make y represent the new number.
 ---
 A computer can't understand this though.  It only knows how to flip switches and send voltage through the resulting circuit.  So we need a translator program.
 
@@ -119,18 +119,26 @@ Our translator program may convert this into something that tells the computer t
 - read that voltage and convert into a value that we store on a register on the processor
 - store the value 42 in another register on the processor
 - add the values together from the registers and store in another register
-- move the value from the register back into the memory location we currently have designated as "x".
+- move the value from the register back into the memory location we currently have designated as "y".
 ---
-To be honest, this isn't even complete.  There is a TON of work that goes on behind the scenes to make these high level human ideas like "add 42 to the value in memory location x and store back into x" into something a computer can do.
+To be honest, this isn't even complete.  There is a TON of work that goes on behind the scenes to make these high level human ideas like "add 42 to the value in memory location x and store back into y" into something a computer can do.
 
 To become wizards though, we need to understand how to communicate our problems from "human-speak" to "computer-speak".
 ---
+This class is to teach you a language you can use to learn how to communicate with a computer.
+
 There are many, many computer languages out there.  A computer language helps to translate a simple idea into something a computer can do.
 ---
-In general you can do anything in one language that you can do in another.  There is a law concerning this that you will learn later in your computer science career.  For now just know that even though you can perform the same functions with almost any language, some are easier to solve certain types of problems.
+In general you can do anything in one language that you can do in another.  There is a law concerning this that you will learn later in your computer science career.  For now just know that even though you can perform the same functions with almost any language, some are easier for solving certain types of problems.
 ---
 The language we will use in this class is called Java.
 
 Java is currently the most widely used language in the world according to the TIOBE index: https://www.tiobe.com/tiobe-index/
 ---
 We will begin studying Java tonight in lab.  For now, just know that it is a computer language that supports a method of communicating with computers called **Object Oriented Programming**.  You will often see this abbreviated as "OO".
+---
+OO Programming is the dominant form of programming these days.  Many, many languages support this paradigm.
+
+Learn how to program in one, and you will have a much easier time learning to program in another.
+
+And you will be well on your way to becoming a "wizard".
