@@ -81,7 +81,7 @@ And thus, become wizards.
 ---
 The very first, most important lesson in this field of wizardry is this:
 
-Computers are just light switches.
+**Computers are just light switches.**
 
 They aren't magical.  They aren't scary.  They are machines composed of lots and lots (and lots...) of tiny switches.
 ---
@@ -91,11 +91,11 @@ This is called programming.
 ---
 In the early days of computing this could be tough.  Sometimes "programming" a computer meant changing the wires around to connect components in different ways.
 
-These days we have higher level languages that convert human-like ideas into commands the computer understands for flipping switches.
+These days we have higher level languages that convert human-like ideas into commands the computer understands for flipping switches (transistors).
 ---
-In fact, often times we convert from one language to another language, to another language... on down the line until the code is ultimately composed into instructions a computer processor can understand.  This leads us to my second law of computers:
+In fact, often times we convert from one language to another language, to another language... on down the line until the code is ultimately composed into instructions a computer processor can understand.  We do this because each stage adds some level of abstraction that we require.  This leads us to my second law of computers:
 ---
-![Video](https://www.youtube.com/watch?v=_bMcXVe8zIs)
+![Video](https://www.youtube.com/embed/_bMcXVe8zIs)
 ---
 For instance, we might have something like this:
 
