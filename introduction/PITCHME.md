@@ -95,6 +95,12 @@ These days we have higher level languages that convert human-like ideas into com
 ---
 In fact, often times we convert from one language to another language, to another language... on down the line until the code is ultimately composed into instructions a computer processor can understand.  We do this because each stage adds some level of abstraction that we require.  This leads us to my second law of computers:
 ---
+**Computers are like onions.  They have layers.**
+
+We need at least a cursory understanding of the layers.
+
+Yes, I got this idea from Shrek:
+---
 ![Video](https://www.youtube.com/embed/_bMcXVe8zIs)
 ---
 For instance, we might have something like this:
@@ -103,7 +109,11 @@ For instance, we might have something like this:
 x = x + 42;
 ```
 
-Which our translator program may convert into something that tells the computer to:
+This seems simple to us.  Take the value that x represents, add 42 to it and make x represent the new number.
+---
+A computer can't understand this though.  It only knows how to flip switches and send voltage through the resulting circuit.  So we need a translator program.
+
+Our translator program may convert this into something that tells the computer to:
 ---
 - flip the switches required to read the electrical voltage for the area in memory we currently have designated as "x"
 - read that voltage and convert into a value that we store on a register on the processor
@@ -115,7 +125,12 @@ To be honest, this isn't even complete.  There is a TON of work that goes on beh
 
 To become wizards though, we need to understand how to communicate our problems from "human-speak" to "computer-speak".
 ---
-There are many, many computer languages out there.  A computer language helps to translate a simple idea into something a computer can do.  The language we will use in this class is Java.
+There are many, many computer languages out there.  A computer language helps to translate a simple idea into something a computer can do.
 ---
+In general you can do anything in one language that you can do in another.  There is a law concerning this that you will learn later in your computer science career.  For now just know that even though you can perform the same functions with almost any language, some are easier to solve certain types of problems.
+---
+The language we will use in this class is called Java.
+
 Java is currently the most widely used language in the world according to the TIOBE index: https://www.tiobe.com/tiobe-index/
 ---
+We will begin studying Java tonight in lab.  For now, just know that it is a computer language that supports a method of communicating with computers called **Object Oriented Programming**.  You will often see this abbreviated as "OO".
