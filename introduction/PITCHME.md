@@ -29,10 +29,10 @@ The contents of this room don't seem "magical".  There are books, live and dead 
 
 Merlyn wasn't a magician, he was a scientist and a scholar!
 ---
-We can see the same thing in The Lord of the Rings.  In the movies we get glimpses of the inside of Saruman's tower (for those of you who don't know he was a wizard gone bad!).
+We can see the same thing in *The Lord of the Rings*.  In the movies we get glimpses of the inside of Saruman's tower (for those of you who don't know he was a wizard gone bad!).
 
 In it, we see exactly the same type of room Merlyn had:
----?image=./introduction/images/saruman_tower.jpg&size=auto 50%
+---?image=./introduction/images/saruman_tower.jpg&size=auto
 ---
 Books, animals in jars, a scale for measuring.
 
