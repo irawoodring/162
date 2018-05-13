@@ -1,2 +1,2 @@
 .reveal blockquote { font-size: .7em;}
-.reveal table { font-size: .7em; }
+.reveal table td, th { font-size: .7em; }
