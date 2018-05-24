@@ -128,6 +128,7 @@ public class Account {
     accountBalance = 0.0;
   }
 }
+```
 ---
 We create a variable by calling its constructor.  We do this with the ```new``` keyword.  For instance, we might create a String object with the following:
 
@@ -165,6 +166,8 @@ We would then create an object like this:
 Account irasAccount = new Account("Ira Woodring", 12938475, 32.75);
 Account billsAccount = new Account("Bill Gates", 1838495, 4392847223.12);
 ```
+---
+In the code above we created (or instantiated) two objects of the same type.  They each have the ability to store the same type of information.  Though they are based on the same blueprint or class, they each have a unique name and can hold unique values.
 ---
 Interestingly enough, a class can provide more than one constructor.  This allows us to create objects in different ways to suit our needs.
 
@@ -244,3 +247,8 @@ The ```void``` is a return type - what type of data does this function return.  
 ```String newName``` is a parameter.  A function can take zero or more parameters.
 
 ---
+We will talk a lot more about functions during this semester.  For now just know that they specify how an object will perform some task.  They are the primary way that objects interact with one another, by having one object call a function of another.
+---
+One last note on objects (for now!).
+
+Objects don't have to be concrete "things".  An object could model an idea or other abstract sort of entity.  For instance, we often make classes that are collections of other objects.  We may need to keep track of a thousand or even some unknown number of Account objects.  We could create a class that housed information about that collection.
