@@ -35,7 +35,7 @@ Java requires us to tell the system what type of information we are going to sto
 
 We do all of this in the **variable declaration**.
 ---
-Declaring a variable tells the system we wish to use to create a variable.  Declarations may look like the following:
+Declaring a variable tells the system we wish to create a variable.  Declarations may look like the following:
 
 ```Java
 public int x;
@@ -47,7 +47,7 @@ int age;
 etc...
 ```
 ---
-You likely noticed that some of the above declarations include the words "public" and "private".  These are **access modifiers** and we will discuss them shortly.  For now, let's concentrate on the data type modifiers.
+You likely noticed that some of the above declarations include the words "public" and "private".  These are **access modifiers** and we will discuss them shortly.
 ---
 Additionally, you may have noticed that I didn't assign any values in the above declarations.  This brings up an important point - we can declare a variable without putting anything in it.
 
