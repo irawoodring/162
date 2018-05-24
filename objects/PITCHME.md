@@ -169,7 +169,7 @@ Account billsAccount = new Account("Bill Gates", 1838495, 4392847223.12);
 Interestingly enough, a class can provide more than one constructor.  This allows us to create objects in different ways to suit our needs.
 
 So both of the above could be in the class (and more!) if we wanted:
-
+---
 ```Java
 public class Account {
 
