@@ -167,3 +167,80 @@ Account billsAccount = new Account("Bill Gates", 1838495, 4392847223.12);
 ```
 ---
 Interestingly enough, a class can provide more than one constructor.  This allows us to create objects in different ways to suit our needs.
+
+So both of the above could be in the class (and more!) if we wanted:
+
+```Java
+public class Account {
+
+  private String customerName;
+  private int accountNumber;
+  private double accountBalance;
+
+  public Account(){
+    customerName = new String();
+    accountNumber = 0;
+    accountBalance = 0;
+  }
+
+  public Account(String customerName, int accountNumber, double accountBalance){
+    this.customerName = customerName;
+    this.accountNumber = accountNumber;
+    this.accountBalance = accountBalance;
+  }
+}
+```
+---
+Now that we have an Account class, we can use it in any other class we wish!  We will use it just the same way we use any other variable, be it a String, Account, Scanner, List, etc.
+---
+You probably noticed in the code above that for numbers I didn't use the ```new``` keyword.  I could have; it is valid to types
+
+```Java
+Integer accountNumber = new Integer(0);
+Double accountBalance = new Double(0.0);
+```
+
+But this is far too much work.  Some data types Java gives us shortcuts for.
+---
+These "shortcut" variables are called **primitives**.  The primitive types Java provides area
+
+- byte
+- short
+- int
+- long
+- float
+- double
+- boolean
+- char
+---
+Any other type must be created by using a constructor call with the ```new``` keyword.
+---
+Once we have an object created we may wish to call one of its functions (i.e. we may ask it to perform some behavior).  We do this with the syntax ```objectName.functionName()```.  For instance, we may have a function called ```void changeName(String newName)``` that our Account class can perform.  We could ask our object to change its name via the following code:
+---
+```Java
+irasAccount.changeName("Ira Keenan");
+```
+
+If I had gotten married and taken my wife's name for instance.
+---
+Notice what we did:
+
+We asked ```irasAccount``` to perform the ```changeName``` function, and we sent it a message - the new name "Ira Keenan" that it needed to perform that task.  At this point though, we haven't actually created the blueprint code in the Account class to perform this function.  Let's do that now!
+---
+```Java
+public void changeName(String newName){
+  customerName = newName;
+}
+```
+
+This says that we are creating a function called ```changeName``` that takes as input a new String called ```newName```, that returns nothing back (the ```void``` keyword) and that is accessible by any other object.
+---
+The ```public``` keyword is the access modifier we talked about before.
+
+The ```void``` is a return type - what type of data does this function return.  Here, nothing.
+
+```changeName``` is the function's name or handle.
+
+```String newName``` is a parameter.  A function can take zero or more parameters.
+
+---
