@@ -114,3 +114,29 @@ You should see that it returns a String.  This means that merely calling ```name
 name = name.toUpperCase();
 ```
 ---
+As I mentioned before, a class can have state, behavior, both, or neither.
+
+If we have a class that doesn't have state, we don't really need to instantiate objects for it.  We have multiple objects of a type so we can keep track of multiple different states (a Human for "Ira" and a Human for "Rodd" for instance).
+---
+So, if we just need to define some behaviors we can mark our functions as **static**.  We aren't going to go into this now, but know that a static function must be called like this:
+
+```Java
+Classname.function();
+```
+---
+Take for instance the Java Math class.
+
+We shouldn't need to create multiple different objects to allow us to find the sine or cosine of some number.  You could have a million different objects and they should all calculate the values the same way without needing any changing state.
+---
+Therefore the Java Math class is primarily made from ```static``` functions.  We would call them like this:
+
+```Java
+double value = Math.sin(3.14);
+double root = Math.sqrt(64);
+```
+---
+Check it out here:
+
+https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html
+---
+Now, find the function that allows us raise a number to an exponent that we provide.  Show how you would use this function to set the double "value" equal to 2 to the 11th.
