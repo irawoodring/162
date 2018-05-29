@@ -1,254 +1,116 @@
 ---
-CIS 162 - Chapter 4 - Objects
+CIS 162 - Chapter 4 - Strings
 
 Rodd Lowell & Ira Woodring
 ---
-Let's recap!
----
-As we talked about before, computers are very simple machines.  They only understand the concept of switches - either electricity is coming through a circuit or it isn't.
----
-To make communicating with computers simpler we gave certain combinations and sequences of switches names that represented higher level ideas.  Incrementation for instance:
+Strings - like all objects can - have state and perform behavior.
 
-```
-a = a + 1;
-```
+The state of a String is an ordering of characters (```char``` data type).
 
-is a high level idea that a compiler converts into the switching a computer understands.
+The behavior is made up of functions that operate on that ordering.
 ---
-The original programs (and many that came much later - even some today!) were just lists of higher level commands.  This works, but can be hard to follow for humans.  When we program with just lists of commands it is called **Imperative Programming.**
----
-For instance, if we want to write a program that keeps track of assets for a bank there needs to be code for dealing with customer accounts, business accounts, government accounts, and a host of specializations (CDs, Money Market Accounts, etc.).
+Even though String seems to be built in to Java, it is a class like any other.  We can even view its source code!
 
-An imperative version of this program would have all of this code in a single code base.
+https://github.com/irawoodring/162/blob/master/strings/String.java
 ---
-For a computer this is fine.  But humans don't think that way.  Human minds tend to get confused easily when too many details are present.
+Yes - this might look scary at first.  But it really isn't.  Most of it is comments.
 
-Imperative programming works, but it can lead to more bugs.
+For instance, look at the following lines:
 ---
-**Object Oriented Programming (OOP)** was created to address this concern.  Instead of writing huge bodies of code that do a lot of different things, we instead focus on smaller areas of concern.
+- 27-37 are importing other classes String needs
 
-We write a class that handles customer accounts, another that handles business accounts, etc.
----
-This means that all of the code for a specific area of concern is grouped together in one place.  This is a much more natural way for humans to imagine programs.  Each class is responsible for its own data - its own areas of concern.
----
-For example, let's assume we wanted to create a simple program like Blackboard.  We might need to keep track of student information, professor information, course information, etc.
----
-Besides the fact that this makes organizing our programs easier and more intuitive, we also gain data protection abilities.
+- 108 is just the class declaration
 
-OO languages (like Java) provide access controls.  This means that a student object can be prevented from changing data housed in a professor object or vice versa.
----
-This is something that is hard (or even impossible) to do with imperative programming.  If all of the code and variables are in the same place then any part of the code can modify any other part.
----
-Let's practice this way of thinking a bit!
+- 111, 114, 117, 131 are just instance variables (the state)
 
-With the other students in your row, consider the following ideas for programs.  What are some of the areas of concern we might need for each?
+- 139 Is the default constructor.
 ---
-A database of animal information for a zoo.
+Exercise!  How many constructors are there?
 ---
-A library inventory system.
+We aren't going to count the two private constructors, so there are 15 different constructors.  Why?
 ---
-A contact management system.
+We have a constructor for each way a programmer might want to create a String.  Perhaps they want one made from another String, they want a blank one, a copy of one, one made out of bytes, etc.
 ---
-Each of the areas of concern you noted can be modeled with a class and created as an object.
----
-Remember, a **class** is a blueprint for an object.  It is just a model.
+This thing isn't complicated at all.  Out of 3,103 lines 1,974 of them are comments (almost 64%).
 
-We **instantiate** a class to create an object.  This means that we tell the computer to build one based on the blueprint.
+This is pretty normal for a Java class because the comments are where the documentation comes from.
+---
+https://docs.oracle.com/javase/7/docs/api/java/lang/String.html
 
-Once we have a blueprint we can instantiate as many objects as we want from it.
+Compare the comments to the text in the file!
 ---
-So, in our banking example, we might have a class for an account.  An account object should hold name, contact, and balance information.  A banking program should have multiple instances of the account class - at least one for each customer of the bank.
+So, if we comment correctly we can automatically generate API (Application Programming Interfaces) for our own code.
 ---
-In Java, a class goes in a file called NameOfTheClass.java.  Our banking example might have an Account.java file.  Inside the file, all of the information about the class must be enclosed in the following code:
+Let's spend some time in the documentation.  Reading documentation is probably the most important skill you will learn in this class.
+---
+In the Javadocs for String find the **Method Summary**.  The Method Summary has all the information about how to ask an object to perform some behavior.
+---
+Remember, functions provide behavior.  They are the "recipes" or "spells" used to tell a computer how do complete a task.
+---
+A function has a signature, with an access modifier return type, name, and parameter list:
 
 ```Java
-public class Account {
-
-}
+public void doStuff();
+private String toString(Object o);
+public int getLength();
+private float weightOf(Car vehicleOne);
 ```
 ---
-This is called a class definition.  All code that pertains to this class will go inside the class definition.  The only code that does not go inside the class definition is import statements.
+Find the method that would return to us the number of characters in an instance of a string.
 ---
-Each object needs to hold information.  An account class might house the following information:
+You should have found
 
 ```Java
-customerName  - A String
-accountNumber - An int
-balance       - A double
+public int length()
 ```
----
-These pieces of information should be available throughout the entire class.  Each instance has the same variables but different values.  Bill Gates and I should be able to each have an account at a bank with different values held in his object than my object.
----
-We call this data that is available to the entire class to be an **instance variable** or a **field**.
 
-They are variables, but they are variables that can be accessed anywhere inside the code for this class.
+How would we use it?
 ---
-Other variables that get used inside of the code - but aren't accessible throughout all the code for the class - are **local variables**.
----
-Together, the instance variables make up the **state** of an object.  Once again, we can create multiple different objects from a class.  Each object can store the same types of state information but each will (likely) hold different values.
----
-An object also has **functions** or **methods**.  These are pieces of code that define how an object can perform some task.  Together, all the functions of a class makeup its **behavior**.
----
-So a **class** is a blueprint used to create **objects**.  **Objects** have **state** and **behavior**.
----
-One of the most important functions that a class defines is the **constructor**.  This is a function that sets up the initial state of the object.
----
-A constructor always has the same name as the function.  For instance, for our Account class above we might have a constructor like the following:
-
-```
-public Account() {
-
-}
-```
----
-This constructor is sort of worthless though... no code so it doesn't do anything.  Let's assume our Account looks like this:
+Well, let's assume we are creating a class that will make use of a String.  We'll go simple with a HelloWorld! type of program:
 ---
 ```Java
-public class Account {
+import java.util.Scanner;
 
-  private String customerName;
-  private int accountNumber;
-  private double accountBalance;
+public class HelloWorld {
 
-}
-```
+  // This class holds no state.
 
-This class has three pieces of state.  We have declared the variables we want to use but we didn't actually create them yet.  We should change our constructor to set the initial values of our variables:
----
-```Java
-public class Account {
-
-  private String customerName;
-  private int accountNumber;
-  private double accountBalance;
-
-  public Account(){
-    customerName = new String();
-    accountNumber = 0;
-    accountBalance = 0.0;
+  public static void main(String[] args){
+      Scanner scnr = new Scanner(System.in);
+      System.out.println("What is your name?");
+      String name = scnr.next();
+      System.out.println("Hello, " + name + "!");
   }
 }
 ```
 ---
-We create a variable by calling its constructor.  We do this with the ```new``` keyword.  For instance, we might create a String object with the following:
+So we created an object named ```name``` of type ```String```.  Now that we have this object, we can ask it to do things.  For instance, we could print out the number of characters in the String:
 
 ```Java
-String myString = new String();
+System.out.println(name.length());
 ```
 ---
-If we wanted to create a new instance of an Account we would want to type something like this:
+See how that works?  Easy!  We have an object and we ask it to do things for us.
+
+Now, let's practice reading documentation and using objects!
+---
+Search the Javadocs for how to make the name entered in all capital letters.
+
+Print the new String on the screen.
+---
+What was the function that accomplishes this task?
+---
+You should have found the function
 
 ```Java
-Account irasAccount = new Account();
-Account billsAccount = new Account();
+public String toUpperCase();
 ```
----
-If we wanted, we could pass information to a constructor as well.  For instance, if we wanted to setup the initial values when we created the Account, we could have a constructor that looks like this:
----
-```Java
-public class Account {
 
-  private String customerName;
-  private int accountNumber;
-  private double accountBalance;
-
-  public Account(String customerName, int accountNumber, double accountBalance){
-    this.customerName = customerName;
-    this.accountNumber = accountNumber;
-    this.accountBalance = accountBalance;
-  }
-}
-```
+What does this function return?
 ---
-We would then create an object like this:
+You should see that it returns a String.  This means that merely calling ```name.toUpperCase()``` will not change the value in our current object.  We need to set our current object equal to the return value from this function like this:
 
 ```Java
-Account irasAccount = new Account("Ira Woodring", 12938475, 32.75);
-Account billsAccount = new Account("Bill Gates", 1838495, 4392847223.12);
+name = name.toUpperCase();
 ```
 ---
-In the code above we created (or instantiated) two objects of the same type.  They each have the ability to store the same type of information.  Though they are based on the same blueprint or class, they each have a unique name and can hold unique values.
----
-Interestingly enough, a class can provide more than one constructor.  This allows us to create objects in different ways to suit our needs.
-
-So both of the above could be in the class (and more!) if we wanted:
----
-```Java
-public class Account {
-
-  private String customerName;
-  private int accountNumber;
-  private double accountBalance;
-
-  public Account(){
-    customerName = new String();
-    accountNumber = 0;
-    accountBalance = 0;
-  }
-
-  public Account(String customerName, int accountNumber, double accountBalance){
-    this.customerName = customerName;
-    this.accountNumber = accountNumber;
-    this.accountBalance = accountBalance;
-  }
-}
-```
----
-Now that we have an Account class, we can use it in any other class we wish!  We will use it just the same way we use any other variable, be it a String, Account, Scanner, List, etc.
----
-You probably noticed in the code above that for numbers I didn't use the ```new``` keyword.  I could have; it is valid to types
-
-```Java
-Integer accountNumber = new Integer(0);
-Double accountBalance = new Double(0.0);
-```
-
-But this is far too much work.  Some data types Java gives us shortcuts for.
----
-These "shortcut" variables are called **primitives**.  The primitive types Java provides area
-
-- byte
-- short
-- int
-- long
-- float
-- double
-- boolean
-- char
----
-Any other type must be created by using a constructor call with the ```new``` keyword.
----
-Once we have an object created we may wish to call one of its functions (i.e. we may ask it to perform some behavior).  We do this with the syntax ```objectName.functionName()```.  For instance, we may have a function called ```void changeName(String newName)``` that our Account class can perform.  We could ask our object to change its name via the following code:
----
-```Java
-irasAccount.changeName("Ira Keenan");
-```
-
-If I had gotten married and taken my wife's name for instance.
----
-Notice what we did:
-
-We asked ```irasAccount``` to perform the ```changeName``` function, and we sent it a message - the new name "Ira Keenan" that it needed to perform that task.  At this point though, we haven't actually created the blueprint code in the Account class to perform this function.  Let's do that now!
----
-```Java
-public void changeName(String newName){
-  customerName = newName;
-}
-```
-
-This says that we are creating a function called ```changeName``` that takes as input a new String called ```newName```, that returns nothing back (the ```void``` keyword) and that is accessible by any other object.
----
-The ```public``` keyword is the access modifier we talked about before.
-
-The ```void``` is a return type - what type of data does this function return.  Here, nothing.
-
-```changeName``` is the function's name or handle.
-
-```String newName``` is a parameter.  A function can take zero or more parameters.
-
----
-We will talk a lot more about functions during this semester.  For now just know that they specify how an object will perform some task.  They are the primary way that objects interact with one another, by having one object call a function of another.
----
-One last note on objects (for now!).
-
-Objects don't have to be concrete "things".  An object could model an idea or other abstract sort of entity.  For instance, we often make classes that are collections of other objects.  We may need to keep track of a thousand or even some unknown number of Account objects.  We could create a class that housed information about that collection.
