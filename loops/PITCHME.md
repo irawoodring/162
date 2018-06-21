@@ -183,3 +183,112 @@ Work with those around you.  Write a class with these specs:
 
 - Prints out the sum with a tax of 6.5% added.
 ---
+Excellent!
+
+While loops are the most essential type of loop in programming.  This is largely because we don't need to know how long the loop needs to run.  For instance, what if we wanted to count the number of words that a user entered?
+---
+An algorithm like this should work!
+
+- Ask the user to enter a sentence
+
+- Read the input with our scanner
+
+- while there is a next token on the scanner, pop it off the scanner and add one to our count
+---
+Being able to loop whether or not we know how many times we must repeat is powerful.
+---
+```for``` loops are another type of loop that we see in most languages.  The ```for``` loop is typically used when we want to iterate over some collection.
+
+These loops have the form:
+
+```Java
+for(preliminary setup, condition, post){
+  CODE BLOCK
+}
+```
+---
+For instance, what if we wanted to copy a string character by character into another string?
+---
+A string is just a collection of chars.  We can tell how many chars long a string is by calling the string's ```size()``` method.  Then we just need to read the character at that position from the first string and put it in the second.
+---
+Since we know how long a string is as soon as it is entered we can copy it by iterating over the collection and copy each character:
+
+```Java
+public String copyString(String one){
+  String two = "";
+  for(int i=0; i<one.length; ++i){}
+    two = two + one.charAt(i);
+  }
+  return two;
+}
+```
+---
+By the way, don't copy a string that way in Java.  There are better built-in methods.  This one is pretty slow (anyone want to guess why?).
+---
+```for``` loops are probably the most used of the loop constructs.  We iterate over things a LOT.  Even though we could use a ```while``` loop instead, the ```for``` loop is just considered better practice for iterating over fixed sizes.
+---
+Let's play with this one a bit as well!
+
+Soon we are going to see something called an ArrayList<>.  ArrayLists hold collections of information.  For instance, if you had 1000 Student objects you could hold them all in an ArrayList object for easy management.
+---
+Here we are going to create an ArrayList<String> - that is an ArrayList that holds String objects.  Then, let's iterate over them with a for loop!
+
+```Java
+import java.util.ArrayList;
+
+public class ListAllStrings {
+  public static void main(String[] args){
+    ArrayList<String> allMyStrings = new ArrayList<String>();
+
+    // For loop to create the strings and add them
+    // to the ArrayList.
+    for(int i=0; i<1000; ++i){
+      String namelessStringToAdd = "I am String " + i + "!";
+      allMyStrings.add(namelessStringToAdd);
+    }
+    // For loop to iterate over the list and print each one.
+    for(int i=0; i<1000; ++i){
+      System.out.println(allMyStrings.get(i));
+    }
+  }
+}
+```
+---
+Now again, we could do the same thing with the ```while``` loop;
+
+```Java
+int i=0;
+while(i<1000){
+  System.out.println(allMyStrings.get(i));
+  ++i;
+}
+```
+
+But it feels more natural with the for loop (probably because we can merge multiple lines into 1).
+---
+There is an alternative syntax in Java for ```for``` loops called the ```foreach``` loop.  When you want to iterate over some collection and you don't care about the numeric position of each element, you can do the following:
+
+```Java
+for(String str:allMyStrings){
+  System.out.println(str);
+}
+```
+---
+The syntax for this ```foreach``` loop is as follows:
+
+```Java
+for(TypeOfObjectInCollection temporaryName:collectionName){
+  Code block.  Use temporaryName to access the current object in this block.
+}
+```
+---
+Let's try this one!
+
+Imagine you have an ArrayList<Student> called students.
+
+- Write code to create a thousand new, empty Students in the list
+
+- Use the ```for``` loop, not the ```foreach```
+---
+Now that you have created the Students, let's iterate back over them and modify their content.  Pretend that the Student class has a ```setName(String name)``` function.  Use the ```foreach``` loop to change the name of every student to "Jane Doe".
+---
