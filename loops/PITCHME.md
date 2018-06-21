@@ -202,7 +202,7 @@ Being able to loop whether or not we know how many times we must repeat is power
 These loops have the form:
 
 ```Java
-for(preliminary setup, condition, post){
+for(preliminary setup; condition; post calculation){
   CODE BLOCK
 }
 ```
@@ -292,3 +292,40 @@ Imagine you have an ArrayList<Student> called students.
 ---
 Now that you have created the Students, let's iterate back over them and modify their content.  Pretend that the Student class has a ```setName(String name)``` function.  Use the ```foreach``` loop to change the name of every student to "Jane Doe".
 ---
+Notice that we don't have to always ```++``` our post-calculation.  We can peform any kind of math we like.  For instance, we could count by 2:
+
+```Java
+for(int i=0; i<1000; i=i*2){
+  System.out.println(i);
+}
+```
+---
+It isn't uncommon for us to need to iterate over multiple ranges simultaneously.  For instance, we might want to fill a grid.
+
+Here I'm going to use an array.  An array is like an ArrayList, in that it holds a collection of objects, but unlike an ArrayList an array can't change in size:
+---
+```Java
+public class MultiplicationTable {
+	public static void main(String[] args){
+		int[][] grid = new int[10][10];
+		for(int i=0; i<10; i++){
+			for(int j=0; j<10; j++){
+				grid[i][j] = i * j;
+			}
+		}
+
+		for(int i=0; i<10; i++){
+			for(int j=0; j<10; j++){
+				System.out.print(grid[i][j] + "\t");
+			}
+			System.out.println();
+		}
+	}
+}
+```
+---
+Now, this multiplication table isn't quite right...  We don't want to go from 0-10, we want to go from 1-12.  But!  Be sure to show the 12s as well.
+
+Fix it, wizards!
+
+Download it here:
