@@ -171,9 +171,7 @@ while(true){
 ---
 This does the same as the first but looks a little different.  Usually we want to use the first method with the sentinel form, but for some problems (like the web server!) we can do it this way.
 ---
-Let's practice.
-
-Work with those around you.  Make sure one person has their laptop and BlueJ.  Write a class that meets the following specs:
+Work with those around you.  Write a class with these specs:
 
 - Is called POS
 
