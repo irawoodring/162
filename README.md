@@ -10,3 +10,5 @@ CIS 162 Teaching Info
 | 3-1     | Mr. L          |             |       |
 | 3-2     | [Objects](https://gitpitch.com/irawoodring/162/master?p=objects "Objects") - Mr. W. | | |
 | 4-1     | [Strings](https://gitpitch.com/irawoodring/162/master?p=strings "Objects") - Mr. W. | | |
+
+[Loops](https://gitpitch.com/irawoodring/162/master?p=loops "Loops")
